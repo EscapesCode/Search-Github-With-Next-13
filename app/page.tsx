@@ -6,6 +6,7 @@ import Detail from '@/components/Detail'
 import {use, useState} from 'react'
 import { User } from '@/types/user';
 import { CariRes } from '@/types/CariRes';
+import Footer from '@/components/footer';
 
 export default function Home() {
   const [isLoading,setisLoading] = useState(false)
@@ -15,7 +16,7 @@ export default function Home() {
     e.preventDefault();
     if(Cari){
       setisLoading(true)
-      fetch(`https://api.github.com/search/users?q=${Cari}&per_page=5`)
+      fetch(`https://api.github.com/search/users?q=${Cari}`)
       .then(res=>res.json())
       .then(data=>{
         console.log(data)
@@ -38,6 +39,7 @@ export default function Home() {
         <Button isLoading={isLoading} type='submit'/>
         </form>
        {Result && <Detail result={Result}/>}
+       
     </div>
   )
 }

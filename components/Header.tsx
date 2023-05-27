@@ -8,6 +8,9 @@ export default function Header() {
 			<div className='pt-3'>
 				<p className='font-normal text-2xl'>Search-Account </p> 
 				<p className='text-3xl font-bold text-center'>  GITHUB</p>
+				<p>
+					Made With <span className='text-red-500'>❤</span> By Fiqro Najiah
+				</p>
 			</div>
 		</div>
 		</>
